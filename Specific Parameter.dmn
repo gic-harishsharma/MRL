@@ -1,0 +1,1249 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_B859E562-9F5D-4890-B3CF-445C1D664D78" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_C7D0CFE3-AE3C-488E-A668-17CD6CD4CB1C" name="Specific Parameter" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_B859E562-9F5D-4890-B3CF-445C1D664D78">
+  <dmn:extensionElements/>
+  <dmn:itemDefinition id="_8695E80C-3C90-493D-9476-5FFF470BACD1" name="lstString" isCollection="true">
+    <dmn:typeRef>string</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:itemDefinition id="_6385BEE7-4E55-4BCA-A477-B97F5ABAEED8" name="lstBool" isCollection="true">
+    <dmn:typeRef>boolean</dmn:typeRef>
+  </dmn:itemDefinition>
+  <dmn:decision id="_35F3B851-9C78-41B3-A194-0A22C0432FE7" name="Specific Parameter">
+    <dmn:extensionElements/>
+    <dmn:variable id="_B5A2728C-655E-4275-A37E-9EB95748BDC6" name="Specific Parameter" typeRef="string"/>
+    <dmn:informationRequirement id="_0FB2B7DF-FA05-41CB-B852-189040966784">
+      <dmn:requiredInput href="#_65AF18B4-69FD-4E84-B5F4-802A61BC419D"/>
+    </dmn:informationRequirement>
+    <dmn:informationRequirement id="_2C00E116-1582-40BB-AC89-F5D3B8F14E1D">
+      <dmn:requiredInput href="#_B0E9A975-8571-4B03-AB5A-8775F4192BFC"/>
+    </dmn:informationRequirement>
+    <dmn:knowledgeRequirement id="_94004433-7367-46EE-BEF8-134F57207744">
+      <dmn:requiredKnowledge href="#_E8AE541B-2674-4984-A8CE-8CF6C19500AF"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_8713FEB4-7BF0-4A28-8DD6-7AD9192BAEB9">
+      <dmn:requiredKnowledge href="#_0BA5E824-1411-4760-BE77-D87878E7DAD0"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_E7E45B10-BD80-4D66-8D77-301D3595BCEE">
+      <dmn:requiredKnowledge href="#_58A4E44A-D08F-4204-B6AE-1B410B4BF430"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_00B4EB20-0266-4AA8-AE83-5C1792556D48">
+      <dmn:requiredKnowledge href="#_A43B88AF-4CE5-4F75-B031-C22D99FA1A61"/>
+    </dmn:knowledgeRequirement>
+    <dmn:context id="_C0477AB4-8712-4FE9-BF2B-72921FAEC5CD">
+      <dmn:contextEntry>
+        <dmn:variable id="_2D52829A-A583-457C-8041-ECF20AF7BA1D" name="Specific_Parameter" typeRef="Any"/>
+        <dmn:literalExpression id="_14E4F53A-5CC5-4F82-AA67-259D220DFCD7">
+          <dmn:text>Rule Parameter List.SpecificParameter[1]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_0105B44B-5D76-44E8-A646-A1F6F3272128" name="Specific_Field" typeRef="Any"/>
+        <dmn:literalExpression id="_C6B18955-FE76-4C2E-AA59-556963EFA45A">
+          <dmn:text>Specific_Parameter[1].Field</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_E5FC362D-AFA9-4C1B-8504-BA94C6160548" name="Specific_EqualTo" typeRef="Any"/>
+        <dmn:literalExpression id="_C4D99DF8-AA51-4FEE-A22B-14F5BBE12A5F">
+          <dmn:text>Specific_Parameter[1][Field = "EqualTo"].Value[1]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_EE1BE88E-B424-42CA-A357-05B33CD8B3A9" name="Specific_Field_Value" typeRef="Any"/>
+        <dmn:literalExpression id="_E93863F1-F717-4AB2-873F-B9B8F5B9F455">
+          <dmn:text>Specific_Parameter[1][Field = "EqualTo"].Value[1]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_71A00E6A-DFEB-4745-824D-711FA61D506E" name="MatchField_Key" typeRef="Any"/>
+        <dmn:literalExpression id="_CC199B02-7E91-4CE1-9340-21F09CA22025">
+          <dmn:text>Specific_Parameter[Field = "EqualTo"].Value[1].Field[1]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_9C012291-F384-4DA3-9A59-21B22CA583AE" name="MatchField_Value" typeRef="lstString"/>
+        <dmn:literalExpression id="_374FCBB1-6F1C-4BD4-883C-9EF3AEF83D16">
+          <dmn:text>Specific_Parameter[1][Field = "EqualTo"].Value[1].Value[1]</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_03E47A8D-7933-4B02-8C07-1A4D781570B6" name="Available_Field" typeRef="lstString"/>
+        <dmn:literalExpression id="_0C00B819-B3B5-47C6-80F5-F8BC93A04A42">
+          <dmn:text>flatten(flatten(Records Data )[Field = "EqualTo"].Value[1].Available_Field)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_7BAA4943-004E-4F1C-A373-3A57CCB37728" name="Available_Docs" typeRef="lstString"/>
+        <dmn:literalExpression id="_21569F84-EAAB-4F86-9F56-59B1D715EA0A">
+          <dmn:text>flatten(flatten(Records Data )[Field = "EqualTo"].Value[1].Available_Doc)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_14D257F7-F33C-4230-BDA4-F5EFEF1C19FC" name="RecordList" typeRef="Any"/>
+        <dmn:literalExpression id="_6A4F8F2E-27D1-4953-B96E-A519649B8C1D">
+          <dmn:text>Records Data </dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_8DBC6E9A-5EF6-4D5D-8460-AAA680993F22" name="CheckEquals" typeRef="boolean"/>
+        <dmn:literalExpression id="_CDBACCCE-99DF-4E95-A766-5432F31D3A12">
+          <dmn:text>for i in 1..count(Records Data) return EqualsTo(Specific_Parameter,Records Data[i],i)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_645D8597-3E00-4F30-94C4-5D144EE37C95" name="CheckStartsWith" typeRef="boolean"/>
+        <dmn:literalExpression id="_EB1E32FC-0C7C-419B-9585-0F808D97C314">
+          <dmn:text>for i in 1..count(Records Data) return StartsWith(Specific_Parameter,Records Data[i],i)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_DD025C5D-E41C-449E-8A15-1229433D27A6" name="CheckLessThanDate" typeRef="boolean"/>
+        <dmn:literalExpression id="_FBCF1F83-9D91-4B5A-A06F-7815E2A1DA09">
+          <dmn:text>for i in 1..count(Records Data) return LessThanDate(Specific_Parameter,Records Data[i],i)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+      <dmn:contextEntry>
+        <dmn:variable id="_05002F95-003F-49F8-92BE-A093C1292201" name="CheckGreaterthan" typeRef="boolean"/>
+        <dmn:literalExpression id="_0E1C8F80-F7B8-43E8-B1E9-C07D4F9D4C71">
+          <dmn:text>for i in 1..count(Records Data) return GreaterThanDate(Specific_Parameter,Records Data[i],i)</dmn:text>
+        </dmn:literalExpression>
+      </dmn:contextEntry>
+    </dmn:context>
+  </dmn:decision>
+  <dmn:businessKnowledgeModel id="_0BA5E824-1411-4760-BE77-D87878E7DAD0" name="StartsWith">
+    <dmn:extensionElements/>
+    <dmn:variable id="_16BDBE35-4D80-45A8-B405-9B8166D659B0" name="StartsWith" typeRef="boolean"/>
+    <dmn:encapsulatedLogic id="_F2626835-ADF9-4FD3-B5A5-B279211E1EE9" kind="FEEL">
+      <dmn:formalParameter id="_2121A2D3-95E4-4195-9A2B-0721A7FD77BD" name="Specific_Parameter" typeRef="Any"/>
+      <dmn:formalParameter id="_85F238AB-00A0-4DA2-B92A-75814AE2A73A" name="RecordList" typeRef="Any"/>
+      <dmn:formalParameter id="_4921F440-944E-4E3D-9782-CDF60A15A04B" name="i" typeRef="number"/>
+      <dmn:context id="_4971A4D3-296E-44DA-A9FF-28601F3C90A2">
+        <dmn:contextEntry>
+          <dmn:variable id="_5672623A-4966-4C50-A7BB-5A21F1D53BF8" name="AnyAvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_E01C0664-BD1D-4316-ABF6-4D27CD83567C">
+            <dmn:text>Specific_Parameter[Field = "StartsWith"].Value[1].AnyAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_1C7DE38A-E74E-441E-A602-B4CF718F1EF3" name="AllAvailableDocs" typeRef="boolean"/>
+          <dmn:literalExpression id="_A7DCE196-29E1-4BA6-B57C-7595FE1F7AC6">
+            <dmn:text>Specific_Parameter[Field = "StartsWith"].Value[1].AllAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B62E6F97-6571-4A05-BEEB-40FF84FE28B3" name="AnyAvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_02757016-7FE1-46FF-90B5-F46B57BB2A0E">
+            <dmn:text>Specific_Parameter[Field = "StartsWith"].Value[1].AnyAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_8433441B-F9AD-4C95-B160-78FA7BEEAD1D" name="AllAvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_1616942B-DFE3-409B-8959-6B8AF5460074">
+            <dmn:text>Specific_Parameter[Field = "StartsWith"].Value[1].AllAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_3D4319C3-94E9-408C-8C24-B1B5B799EFFC" name="SpecificField" typeRef="string"/>
+          <dmn:literalExpression id="_068BEBD0-7D1E-411F-92FA-D7F1A0C869F4">
+            <dmn:text>Specific_Parameter[Field = "StartsWith"].Value[1].Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_EFA96D84-1E79-4770-B706-412B320CABAB" name="RecordValue" typeRef="string"/>
+          <dmn:literalExpression id="_BF3D8101-4FA5-4A34-A1EC-BC63D3FAADBE">
+            <dmn:text>RecordList[Field = SpecificField].Value</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_58B89358-5E83-4ED8-8687-8EB05593CF41" name="SpecificValue" typeRef="string"/>
+          <dmn:literalExpression id="_838D7D0A-13C6-4B4B-90C5-2E02DE562A3B">
+            <dmn:text>Specific_Parameter[Field = "StartsWith"].Value[1].Value[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_61A34B5A-1EAD-4223-B703-8E0A32FBE0DC" name="CheckCondition_list" typeRef="lstBool"/>
+          <dmn:literalExpression id="_624A4342-2AF7-47F6-88A0-BD72CB5B8853">
+            <dmn:text>if string length(SpecificValue)&lt;1 then&#xd;
+for i in SpecificValue return&#xd;
+if starts with(RecordValue,i) then true else false&#xd;
+else false</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_3EE2CD6F-26B3-48A5-AD2A-095EF1008ED9" name="CheckCondition" typeRef="boolean"/>
+          <dmn:literalExpression id="_34228E68-6757-42A4-8F86-29C39FF61317">
+            <dmn:text>if list contains(CheckCondition_list,true) then true else false</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_FEE4E95C-0F92-4EE5-A659-514F7D394FF9" name="AnyCheck_FieldRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_E53BD2F7-42DA-4FCB-ABBE-1FBEA30E142E">
+            <dmn:text>if count(AnyAvailableField)>0 then&#xd;
+if CheckCondition then &#xd;
+for i in AnyAvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_37935391-7912-4133-8E33-E7DB33571C93" name="AllCheck_FieldRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_5C94A5AD-F473-48EF-9883-1D36FFCA0C40">
+            <dmn:text>if count(AllAvailableField)>0 then&#xd;
+if CheckCondition then &#xd;
+for i in AllAvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_854D8C41-8FA2-4905-AC5B-9C7E55DBAEA8" name="AlldocNames" typeRef="lstString"/>
+          <dmn:literalExpression id="_90F9420F-170C-4ED0-A55A-555D988410B7">
+            <dmn:text>flatten(flatten(RecordList)[Field = "documentSource"].Value)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_518CD623-4620-4106-95AF-7CCDBE5120E3" name="DocsFieldData" typeRef="lstString"/>
+          <dmn:literalExpression id="_71DCACB4-51CD-4145-9157-2F348DA86B45">
+            <dmn:text>flatten(AlldocNames)[associated = true].section</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_8C199F66-4DED-47CF-8810-655095352A98" name="AnyCheck_DocRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_5441A8ED-E5A8-4796-A941-1C79E137E37C">
+            <dmn:text>if count(AnyAvailableDocs)>0 then&#xd;
+for i in AnyAvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B3E2C17F-B914-482C-868C-CF52460B5B5B" name="AllCheck_DocRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_8FE3C1A1-8A02-46C6-B760-88203E7791A1">
+            <dmn:text>if count(AllAvailableDocs)>0 then&#xd;
+for i in AllAvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_EBD4F990-CD69-416A-BA41-A4254324DEE5" name="Result" typeRef="boolean"/>
+          <dmn:literalExpression id="_84F226FE-591F-4D8A-AA2C-292E9A89BADC">
+            <dmn:text>if not(CheckCondition) then &#xd;
+false&#xd;
+else if AnyCheck_FieldRequirement and AllCheck_FieldRequirement and AnyCheck_DocRequirement and AllCheck_DocRequirement then true &#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:inputData id="_65AF18B4-69FD-4E84-B5F4-802A61BC419D" name="Rule Parameter List">
+    <dmn:extensionElements/>
+    <dmn:variable id="_48D73280-998B-4B6E-B5C5-12D5B59984B7" name="Rule Parameter List" typeRef="Any"/>
+  </dmn:inputData>
+  <dmn:businessKnowledgeModel id="_A43B88AF-4CE5-4F75-B031-C22D99FA1A61" name="GreaterThanDate">
+    <dmn:extensionElements/>
+    <dmn:variable id="_254F3617-2749-45B8-8355-0B87B902D108" name="GreaterThanDate" typeRef="boolean"/>
+    <dmn:encapsulatedLogic id="_CEB31A48-0AEC-44EB-AE61-21A97B27EE11" kind="FEEL">
+      <dmn:formalParameter id="_D4ED71FD-EC6D-4A8C-8263-C0299D22B967" name="Specific_Parameter" typeRef="Any"/>
+      <dmn:formalParameter id="_AE9FCE26-4621-482C-B5EB-ED807EB97B0B" name="RecordList" typeRef="Any"/>
+      <dmn:formalParameter id="_938E7D73-A7B1-4534-8C4D-5C4366AC7C9F" name="i" typeRef="number"/>
+      <dmn:context id="_0827B4A1-72DA-40C5-95CF-755231A5C5B2">
+        <dmn:contextEntry>
+          <dmn:variable id="_A1EA6757-5CB2-441D-9DBF-7A39F1A0B00A" name="AnyAvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_C97D9B1C-D293-4F02-81D3-487F8DEBA761">
+            <dmn:text>Specific_Parameter[Field = "GreaterThanDate"].Value[1].AnyAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_E04AB57B-0A74-46E1-9CAB-F98BF937AFB8" name="AllAvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_69E2FFA8-633E-425B-A5BE-D8940C4D7F9F">
+            <dmn:text>Specific_Parameter[Field = "GreaterThanDate"].Value[1].AllAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_F3DB2039-E818-4375-BE66-E2F05DD8665F" name="AnyAvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_F48B7972-864C-455A-9242-AF3C25AD805A">
+            <dmn:text>Specific_Parameter[Field = "GreaterThanDate"].Value[1].AnyAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_346B4816-9CBB-4BBC-804D-F96F1BC17E01" name="AllAvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_CAB6F0D5-A314-4FBC-9E12-D62B48D58473">
+            <dmn:text>Specific_Parameter[Field = "GreaterThanDate"].Value[1].AllAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_54EBFC14-2B41-47E6-AB45-2021682F9FEC" name="SpecificField" typeRef="string"/>
+          <dmn:literalExpression id="_450D5AB8-CB74-424E-8C07-3C860D57D10A">
+            <dmn:text>Specific_Parameter[Field = "GreaterThanDate"].Value[1].Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_BAC2798B-C3EC-4405-8F66-828044931148" name="RecordValue" typeRef="string"/>
+          <dmn:literalExpression id="_455CF35B-CEB7-466C-9DF6-2E79F81D2E94">
+            <dmn:text>RecordList[Field = SpecificField].Value</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_4C2DE9C9-7F6E-4A9F-B6CE-8CF51BC2D4C1" name="SpecificValue" typeRef="lstString"/>
+          <dmn:literalExpression id="_BD98A39C-109D-4772-B3FF-807DCA009655">
+            <dmn:text>Specific_Parameter[Field = "GreaterThanDate"].Value[1].Value[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_93AA668C-EF45-4954-9C2B-E0BA2FD6C428" name="Test_RecordDate" typeRef="string"/>
+          <dmn:literalExpression id="_AF8F141B-079F-472D-8603-23F2C21538DB">
+            <dmn:text>date(RecordValue)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B2C94D82-64FF-456C-BA01-D930F464AEB0" name="CheckCondition" typeRef="boolean"/>
+          <dmn:literalExpression id="_7DB37178-C57D-4558-89AE-1A5CC60C146C">
+            <dmn:text>if (date(RecordValue) > date(SpecificValue)) then true else false</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_5941C7EC-BB6C-4025-8C27-1600691F98A4" name="CheckAny_FieldRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_AC8F0051-407E-42FE-B850-439FB2973F22">
+            <dmn:text>if count(AnyAvailableField)>0 then&#xd;
+if CheckCondition then &#xd;
+for i in AnyAvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_BE9E69E7-F62A-43B5-AF0B-4CDBE96BDCB4" name="CheckAll_FieldRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_846BF2E9-C600-4D50-B3D7-5A7D469F2494">
+            <dmn:text>if count(AllAvailableField)>0 then&#xd;
+if CheckCondition then &#xd;
+for i in AllAvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_82C7A702-DACA-4118-B193-775F992F580C" name="CheckdistAny_FieldRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_9C4189EF-5069-45FE-B87B-45E1FC50FECF">
+            <dmn:text>if list contains(CheckAny_FieldRequirement,false) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_9246C12B-3E92-494B-B56C-61B14C513E2E" name="CheckdistAll_FieldRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_3D4A68BC-779B-4458-B69F-628F05857C8A">
+            <dmn:text>if list contains(CheckAll_FieldRequirement,false) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_FC4F1A0A-F4E4-4A62-88BE-EFCFF8DAE7C8" name="AlldocNames" typeRef="lstString"/>
+          <dmn:literalExpression id="_C26F49FB-881A-457F-851D-F15FE4477005">
+            <dmn:text>flatten(flatten(RecordList)[Field = "documentSource"].Value)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_A1D5F89A-0334-4536-B439-FBE6F0131C1E" name="DocsFieldData" typeRef="lstString"/>
+          <dmn:literalExpression id="_515FBCCF-2298-486D-8859-E0A716C5F878">
+            <dmn:text>flatten(AlldocNames)[associated = true].section</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_D829D348-A322-430A-9DC1-541921D1081C" name="CheckAny_DocRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_2D0309AD-6219-4773-848E-D76291AA375B">
+            <dmn:text>if count(AnyAvailableDocs)>0 then&#xd;
+if CheckCondition then&#xd;
+for i in AnyAvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_0B1762AA-BFBB-4674-BC11-DBBA88316AC3" name="CheckAll_DocRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_D46D116E-8751-460E-AADA-C583C920FF4E">
+            <dmn:text>if count(AllAvailableDocs)>0 then&#xd;
+if CheckCondition then&#xd;
+for i in AllAvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_399AC0DC-713C-4677-A448-DE8970365B79" name="CheckdistAny_DocRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_C4E97C96-1E15-46DB-AD6E-BB6BF33CCC57">
+            <dmn:text>if list contains(CheckAny_DocRequirement,false) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_4CC71237-9BED-4C90-9E0F-C44DDD79D585" name="CheckdistAll_DocRequirement" typeRef="boolean"/>
+          <dmn:literalExpression id="_FA8017B3-88A4-451D-8C51-1B9374B2D57E">
+            <dmn:text>if list contains(CheckAll_DocRequirement,false) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_67EA81C0-0F11-45FE-8F8D-E549A5182885" name="Result" typeRef="boolean"/>
+          <dmn:literalExpression id="_3AB8FB7C-3B06-4678-87E6-87A5CE2566EF">
+            <dmn:text>if CheckdistAny_FieldRequirement and CheckdistAll_FieldRequirement and CheckdistAny_DocRequirement and CheckdistAll_DocRequirement then true else false</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_2E241072-14F0-4644-A025-3FF5A234F049">
+            <dmn:text>not(Result)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:businessKnowledgeModel id="_58A4E44A-D08F-4204-B6AE-1B410B4BF430" name="LessThanDate">
+    <dmn:extensionElements/>
+    <dmn:variable id="_DAAA1D19-EEC3-4956-8F16-FE34E05798D0" name="LessThanDate" typeRef="boolean"/>
+    <dmn:encapsulatedLogic id="_7A64C79F-FA33-4771-8CA1-46E0FFED8940" kind="FEEL">
+      <dmn:formalParameter id="_7E7FD229-9AA3-4E6A-8C9F-67D8AA3B9C82" name="Specific_Parameter" typeRef="Any"/>
+      <dmn:formalParameter id="_C37A4731-7550-4886-8A77-85DD8C08B866" name="RecordList" typeRef="Any"/>
+      <dmn:formalParameter id="_99FDA827-E5F9-4383-A519-E6D27A81F0B1" name="i" typeRef="number"/>
+      <dmn:context id="_AD333DEF-0471-4FB9-B790-FFD149722C58">
+        <dmn:contextEntry>
+          <dmn:variable id="_F3C81892-A5EF-40B4-9843-EBA18831635C" name="Any_AvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_67D50CCA-37B2-415B-BF0F-FF4CE5501FCF">
+            <dmn:text>Specific_Parameter[Field = "LessThanDate"].Value[1].AnyAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B9711EB2-D50C-4C48-9970-45FDA4DDA6DC" name="All_AvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_3DADA5A1-A11C-4B5F-AF68-80E36F3FBE54">
+            <dmn:text>Specific_Parameter[Field = "LessThanDate"].Value[1].AllAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_0EA1E5E1-00A9-4CD2-A83D-FFC88ED9506B" name="Any_AvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_FC7FA547-A08F-4E50-88E7-D335C6D859A8">
+            <dmn:text>Specific_Parameter[Field = "LessThanDate"].Value[1].AnyAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_624F90F8-E723-4444-92FE-74729FAA8E1A" name="All_AvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_FD42A20C-26F3-410E-B090-476A8AC3E84D">
+            <dmn:text>Specific_Parameter[Field = "LessThanDate"].Value[1].AllAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_8D5753FA-34D6-4FEB-BC82-A78F4EFA30B2" name="SpecificField" typeRef="string"/>
+          <dmn:literalExpression id="_28875321-B5C6-42F6-A487-0422438787D0">
+            <dmn:text>Specific_Parameter[Field = "LessThanDate"].Value[1].Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_1FEF08B6-13C1-4378-B896-26CEE58D9BEE" name="RecordValue" typeRef="string"/>
+          <dmn:literalExpression id="_413EFAF1-D4DA-4764-B8B0-D5332C0DAB6E">
+            <dmn:text>RecordList[Field = SpecificField].Value</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_A5541A68-E83B-48B2-AD5D-C39480434570" name="SpecificValue" typeRef="lstString"/>
+          <dmn:literalExpression id="_26FCA49E-3271-4D5A-B3E8-0A76B1E2348A">
+            <dmn:text>Specific_Parameter[Field = "LessThanDate"].Value[1].Value[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_CF209906-3022-46EA-B50B-C2B15CE2EE6A" name="CheckCondition" typeRef="boolean"/>
+          <dmn:literalExpression id="_2A4555E8-0A69-47A1-9AC9-C5FFD2476FBE">
+            <dmn:text>if (date(RecordValue) &lt; date(SpecificValue)) then true else false </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_EAA9BF72-80A6-4BE7-A7E9-41C0E6EE40D5" name="AnyCheck_FieldRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_F0B14BA0-3DF5-4794-A1F7-D2B82A361855">
+            <dmn:text>if count(Any_AvailableField)>0 then&#xd;
+if CheckCondition then &#xd;
+for i in Any_AvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_405A3769-179A-432A-ACDB-7182ECD1E0D2" name="AllCheck_FieldRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_6233D1D1-FE90-4292-88BB-43DB11E507C7">
+            <dmn:text>if count(All_AvailableField)>0 then&#xd;
+if CheckCondition then &#xd;
+for i in All_AvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B90182E0-1ED1-47A2-884B-D846BD5510B1" name="DistAnyCheckField" typeRef="boolean"/>
+          <dmn:literalExpression id="_9ACAA398-6948-440E-9F83-63C6CC2872D4">
+            <dmn:text>if list contains(AnyCheck_FieldRequirement,false ) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_89B81D15-300B-49E4-9008-471A400B7892" name="DistAllCheckField" typeRef="boolean"/>
+          <dmn:literalExpression id="_5C6844A2-2FC8-4144-BF53-73B59537F92E">
+            <dmn:text>if list contains(AllCheck_FieldRequirement,false ) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_A986D921-9A2D-4EA2-B4B5-3391BDF256BF" name="AlldocNames" typeRef="lstString"/>
+          <dmn:literalExpression id="_402D32A0-864B-4E60-8F22-367184525A6B">
+            <dmn:text>flatten(flatten(RecordList)[Field = "documentSource"].Value)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_CB924589-F072-43C3-B79E-118E88EE7A31" name="DocsFieldData" typeRef="lstString"/>
+          <dmn:literalExpression id="_DC0C5790-4C17-4126-AA1B-22427996178D">
+            <dmn:text>flatten(AlldocNames)[associated = true].section</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_F185C2E2-2CCD-48CC-83CB-1CB3BDDD17D7" name="CheckAny_DocRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_3FAD6549-7FE5-4878-9E85-B225B36AD39F">
+            <dmn:text>if count(Any_AvailableDocs)>0 then&#xd;
+if CheckCondition then&#xd;
+for i in Any_AvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_4B6F5744-1236-45B9-BE63-12B2A8555A21" name="CheckAll_DocRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_81E4FA83-37BA-423A-A846-FE6EB7E17CE4">
+            <dmn:text>if count(All_AvailableDocs)>0 then&#xd;
+if CheckCondition then&#xd;
+for i in All_AvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_32F69B74-54D5-4AB1-ADDC-9A511631C8E2" name="DistAnyCheckDoc" typeRef="boolean"/>
+          <dmn:literalExpression id="_7CDD55B0-FAA5-4A2F-85C5-7FDCC3194D90">
+            <dmn:text>if list contains(CheckAny_DocRequirement,false ) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B764CD68-5A1A-4A97-8B4B-239187151759" name="DistAllCheckDoc" typeRef="boolean"/>
+          <dmn:literalExpression id="_F9E698CD-13D4-4443-AFA5-E0F2C92C812D">
+            <dmn:text>if list contains(CheckAll_DocRequirement,false ) then false else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_35331933-FB81-4CE3-AC80-CAD10742A103" name="Result" typeRef="boolean"/>
+          <dmn:literalExpression id="_71E5570F-A921-4D78-875F-DD7E559FE50B">
+            <dmn:text>if DistAnyCheckField and DistAllCheckField and DistAnyCheckDoc and DistAllCheckDoc then true else false</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_90262596-63BC-4496-BA77-9113A58CB3D7">
+            <dmn:text>not(Result)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:businessKnowledgeModel id="_87D210F5-4FF1-4F6F-B750-568DD8763D72" name="AnyFieldRequired">
+    <dmn:extensionElements/>
+    <dmn:variable id="_0D6A80D4-4107-477B-B3EA-F36B665EE891" name="AnyFieldRequired" typeRef="lstString"/>
+    <dmn:encapsulatedLogic id="_048C693C-A41F-4069-88C0-9E01036E8A21" kind="FEEL">
+      <dmn:formalParameter id="_A2D5B526-49A3-43C7-83CF-0B4AC6DF8959" name="RecordList" typeRef="Any"/>
+      <dmn:formalParameter id="_6C587165-B00A-4A70-B330-11BCEBDC8603" name="AnyAvailable_Field" typeRef="lstString"/>
+      <dmn:context id="_A3B81783-347D-4FBF-9D94-DDF5CB3D43B1">
+        <dmn:contextEntry>
+          <dmn:variable id="_2FBBED4B-2589-463A-BC15-175B77000940" name="Result List" typeRef="lstString"/>
+          <dmn:literalExpression id="_4E1B2E9C-4B7C-43BA-9815-5526D85CBED7">
+            <dmn:text>AnyAvailable_Field[not(item in RecordList[Field = item])]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_7830EADD-97D0-4F07-9586-1BDB1290721D" name="AnyField_Required" typeRef="lstString"/>
+          <dmn:literalExpression id="_4A808A70-5029-489F-8137-AEF37C0BFB87">
+            <dmn:text>for i in AnyAvailable_Field return&#xd;
+if count(RecordList[Field = i])>0 then [] else AnyAvailable_Field</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_14883283-B34C-443F-A5E2-FA9975C8DA5F">
+            <dmn:text>AnyField_Required</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:inputData id="_B0E9A975-8571-4B03-AB5A-8775F4192BFC" name="Records Data">
+    <dmn:extensionElements/>
+    <dmn:variable id="_FB733D63-DE87-463A-BC76-0B83BCD75D0A" name="Records Data" typeRef="Any"/>
+  </dmn:inputData>
+  <dmn:businessKnowledgeModel id="_6AF4F97B-03BB-4E0E-83EC-74016009CDE7" name="AllField Required">
+    <dmn:extensionElements/>
+    <dmn:variable id="_76C165F3-42C9-445E-B121-86E585974B21" name="AllField Required" typeRef="lstString"/>
+    <dmn:encapsulatedLogic id="_BA453C60-C238-49AC-BCC1-E9C28936EBCE" kind="FEEL">
+      <dmn:formalParameter id="_D838D8A6-DF1C-4FAF-94BA-CA6153F6EB48" name="RecordList" typeRef="Any"/>
+      <dmn:formalParameter id="_3E28EC4D-AC50-4D90-AB0A-8CBE314EE88F" name="AllAvailable_Field" typeRef="lstString"/>
+      <dmn:context id="_78997069-9861-4825-841F-348B28A3780F">
+        <dmn:contextEntry>
+          <dmn:variable id="_838DE964-30EC-4217-AAE1-5D78A3E799FC" name="Result List" typeRef="lstString"/>
+          <dmn:literalExpression id="_99552680-EEB9-4169-BDF6-6F10864670A4">
+            <dmn:text>AllAvailable_Field[not(item in RecordList)]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_7F65E03B-C4CC-48E1-8CAE-BBFC7B33E51A" name="DistVal" typeRef="lstString"/>
+          <dmn:literalExpression id="_5A94AD57-CE88-4C00-AB07-96BD3E51FA9C">
+            <dmn:text>for i in AllAvailable_Field return&#xd;
+if count(RecordList[Field = i].value)>0 then [] else i</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_1F2E0162-1178-4683-BD46-D285D2B36FB5" name="All NotFindList" typeRef="lstString"/>
+          <dmn:literalExpression id="_8D3FC9DF-8653-49F6-A42E-2D71CB5DF27E">
+            <dmn:text>if(list contains(DistVal,"")) then remove(DistVal,index of(DistVal,"" ) ) else DistVal</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_90506759-3EFC-49A5-AE02-4067BF6FC73B">
+            <dmn:text>All NotFindList</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+  </dmn:businessKnowledgeModel>
+  <dmn:businessKnowledgeModel id="_E8AE541B-2674-4984-A8CE-8CF6C19500AF" name="EqualsTo">
+    <dmn:extensionElements/>
+    <dmn:variable id="_93B505F1-8A62-4203-9C8F-5C2E528D7F00" name="EqualsTo" typeRef="boolean"/>
+    <dmn:encapsulatedLogic id="_17F41561-425B-4C01-A895-BF1BD7D2CA9D" kind="FEEL">
+      <dmn:formalParameter id="_35B81B95-BB88-4E0C-BE92-0EBAC38186C8" name="Specific_Parameter" typeRef="Any"/>
+      <dmn:formalParameter id="_913C5E1E-33C3-4A00-80A2-EF9D0B745A2B" name="RecordList" typeRef="Any"/>
+      <dmn:formalParameter id="_DFDCD2BA-9FB0-4C4B-8400-0DF6D1013EA2" name="i" typeRef="number"/>
+      <dmn:context id="_FA0708CC-E7EB-4A99-A66C-02B5EA5E0BA8">
+        <dmn:contextEntry>
+          <dmn:variable id="_DDE7725F-75DB-438C-B354-917E0627D8FE" name="AnyAvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_71077120-A2C5-488B-AA4D-CB36244316CB">
+            <dmn:text>Specific_Parameter[Field = "EqualTo"].Value[1].AnyAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_A4F9433D-A3D7-4204-A6FA-D34415F09A17" name="AllAvailableDocs" typeRef="lstString"/>
+          <dmn:literalExpression id="_F23F5B88-B690-49D2-BE13-DB1689E08CDE">
+            <dmn:text>Specific_Parameter[Field = "EqualTo"].Value[1].AllAvailable_Doc[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_46F79AE5-E3DA-47E8-85F4-071E8C4F4D58" name="AnyAvailableField" typeRef="lstString"/>
+          <dmn:literalExpression id="_5D16B86F-9108-44DF-92B3-0AC7F04C8D87">
+            <dmn:text>Specific_Parameter[Field = "EqualTo"].Value[1].AnyAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_11A6EC70-2643-406F-BD46-1C0AA8F06872" name="AllAvailable_Field" typeRef="lstString"/>
+          <dmn:literalExpression id="_F0362F7E-2674-465A-9C44-0B6DBBCB60B9">
+            <dmn:text>Specific_Parameter[Field = "EqualTo"].Value[1].AllAvailable_Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_6493412D-6AA7-495B-8FE5-CCE5170FD8E2" name="SpecificField" typeRef="string"/>
+          <dmn:literalExpression id="_AA8D91E5-DE75-44F3-9BDC-EB433F1971D4">
+            <dmn:text>Specific_Parameter[Field = "EqualTo"].Value[1].Field[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_C983378A-41F4-4010-A78A-A51840941029" name="RecordValue" typeRef="string"/>
+          <dmn:literalExpression id="_EE81C01F-918E-4515-A4A8-3FF27B5EFFD6">
+            <dmn:text>RecordList[Field = SpecificField].Value</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_07AEFD9E-8C3C-4F68-8D50-3E743D00DE52" name="SpecificValue" typeRef="lstString"/>
+          <dmn:literalExpression id="_DFFF24AB-1447-44C7-A32B-3DB0E517FCE7">
+            <dmn:text>Specific_Parameter[1][Field = "EqualTo"].Value[1].Value[1]</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_52793E73-F48F-4731-82AB-5BEA042F3F46" name="CheckCondition" typeRef="boolean"/>
+          <dmn:literalExpression id="_D76ACD56-A918-479A-AC31-62CA4E4787EE">
+            <dmn:text>list contains(SpecificValue, RecordValue)&#xd;
+</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_4CFCCF2C-5EBD-425C-BA20-3BFAFC504D1C" name="Check_AnyFieldRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_F98BEEB9-C6FA-4973-8647-9E4F7100220B">
+            <dmn:text>if (count(AnyAvailableField)>0) or (count(AllAvailable_Field)>0) then&#xd;
+if CheckCondition then &#xd;
+for i in AnyAvailableField return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_B1F29CB4-D161-4485-BE34-F68C11FA097E" name="CheckAll_FieldRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_02FDDE3A-EE54-4064-8565-2F2C441019D6">
+            <dmn:text>if (count(AllAvailable_Field)>0) then&#xd;
+if CheckCondition then &#xd;
+for i in AllAvailable_Field return &#xd;
+if (string length(RecordList[Field = i].Value)>0) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_37E0E441-2122-4136-8DE2-4BF4801B5020" name="DistAnyField" typeRef="boolean"/>
+          <dmn:literalExpression id="_DF0E398F-B466-4202-82C0-115FE2295A70">
+            <dmn:text>if list contains(Check_AnyFieldRequirement,false) then false else true </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_75DF4B2F-6BF1-448B-B9B7-5F158DA5B23A" name="DistAllField" typeRef="boolean"/>
+          <dmn:literalExpression id="_ED90B9F0-96C1-4A20-BA14-604F11A722E9">
+            <dmn:text>if list contains(CheckAll_FieldRequirement,false) then false else true </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_5C604193-4CC2-4D87-8D84-422B2B33D90A" name="AlldocNames" typeRef="lstString"/>
+          <dmn:literalExpression id="_0C2A9672-D0B0-481F-9555-7D62F4BB3FC7">
+            <dmn:text>flatten(flatten(RecordList)[Field = "documentSource"].Value)</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_8A6D7930-97B3-467B-8882-5D904D05C4EF" name="DocsFieldData" typeRef="lstString"/>
+          <dmn:literalExpression id="_6CC5CBEF-EAC2-4C4B-925E-5B5F8BA6BCCC">
+            <dmn:text>flatten(AlldocNames)[associated = true].section</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_A82A4867-F3AE-46A9-A424-EADD543E79E3" name="CheckAny_DocRequirement" typeRef="lstString"/>
+          <dmn:literalExpression id="_518B950B-D847-491A-B313-6DDAB5D606E1">
+            <dmn:text>if (count(AnyAvailableDocs)>0)  then&#xd;
+if CheckCondition then&#xd;
+for i in AnyAvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_7FD22A27-36B2-4837-BC6B-AA6C9A1B71B1" name="CheckAll_DocRequirement" typeRef="lstBool"/>
+          <dmn:literalExpression id="_2926C2CD-F081-4BAE-B549-9EC070F21099">
+            <dmn:text>if (count(AllAvailableDocs)>0)  then&#xd;
+if CheckCondition then&#xd;
+for i in AllAvailableDocs return&#xd;
+if list contains(DocsFieldData,i) then true else false&#xd;
+else true&#xd;
+else true</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_8A8B51BC-4F32-4DF0-B85C-A3E5E2442A79" name="DistAnyDoc" typeRef="boolean"/>
+          <dmn:literalExpression id="_CF719315-6E69-4471-94CB-308B61C8F872">
+            <dmn:text>if list contains(CheckAny_DocRequirement,false) then false else true </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_76967D98-D092-4434-BA14-258A9C2F39DF" name="DistAllDoc" typeRef="boolean"/>
+          <dmn:literalExpression id="_171778C5-DBE6-48A9-83EF-B131522F5602">
+            <dmn:text>if list contains(CheckAll_DocRequirement,false) then false else true </dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:variable id="_728B5E07-F9FB-4A4E-A0A2-825CDCC3E1C9" name="Result" typeRef="boolean"/>
+          <dmn:literalExpression id="_00AE01F9-2284-4866-83F5-C38ED7A8F7CB">
+            <dmn:text>if not(CheckCondition) then&#xd;
+false&#xd;
+else if  DistAnyField and DistAllField and DistAnyDoc and DistAllDoc then true &#xd;
+else true&#xd;
+</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+        <dmn:contextEntry>
+          <dmn:literalExpression id="_6763B426-A01B-42C0-803C-484E2E420916">
+            <dmn:text>Result</dmn:text>
+          </dmn:literalExpression>
+        </dmn:contextEntry>
+      </dmn:context>
+    </dmn:encapsulatedLogic>
+    <dmn:knowledgeRequirement id="_19933A93-454E-4E81-9087-4BB02A2CEC8E">
+      <dmn:requiredKnowledge href="#_6AF4F97B-03BB-4E0E-83EC-74016009CDE7"/>
+    </dmn:knowledgeRequirement>
+    <dmn:knowledgeRequirement id="_DBF70682-65F2-4D6A-8C3E-34EFEB995A3C">
+      <dmn:requiredKnowledge href="#_87D210F5-4FF1-4F6F-B750-568DD8763D72"/>
+    </dmn:knowledgeRequirement>
+  </dmn:businessKnowledgeModel>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <di:extension>
+        <kie:ComponentsWidthsExtension>
+          <kie:ComponentWidths dmnElementRef="_C0477AB4-8712-4FE9-BF2B-72921FAEC5CD">
+            <kie:width>50.0</kie:width>
+            <kie:width>184.0</kie:width>
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_14E4F53A-5CC5-4F82-AA67-259D220DFCD7">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_C6B18955-FE76-4C2E-AA59-556963EFA45A">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_C4D99DF8-AA51-4FEE-A22B-14F5BBE12A5F">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_E93863F1-F717-4AB2-873F-B9B8F5B9F455">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CC199B02-7E91-4CE1-9340-21F09CA22025">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_374FCBB1-6F1C-4BD4-883C-9EF3AEF83D16">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0C00B819-B3B5-47C6-80F5-F8BC93A04A42">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_21569F84-EAAB-4F86-9F56-59B1D715EA0A">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6A4F8F2E-27D1-4953-B96E-A519649B8C1D">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CDBACCCE-99DF-4E95-A766-5432F31D3A12">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_EB1E32FC-0C7C-419B-9585-0F808D97C314">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FBCF1F83-9D91-4B5A-A06F-7815E2A1DA09">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0E1C8F80-F7B8-43E8-B1E9-C07D4F9D4C71">
+            <kie:width>1045.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_4971A4D3-296E-44DA-A9FF-28601F3C90A2">
+            <kie:width>50.0</kie:width>
+            <kie:width>215.0</kie:width>
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_E01C0664-BD1D-4316-ABF6-4D27CD83567C">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A7DCE196-29E1-4BA6-B57C-7595FE1F7AC6">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_02757016-7FE1-46FF-90B5-F46B57BB2A0E">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_1616942B-DFE3-409B-8959-6B8AF5460074">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_068BEBD0-7D1E-411F-92FA-D7F1A0C869F4">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_BF3D8101-4FA5-4A34-A1EC-BC63D3FAADBE">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_838D7D0A-13C6-4B4B-90C5-2E02DE562A3B">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_624A4342-2AF7-47F6-88A0-BD72CB5B8853">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_34228E68-6757-42A4-8F86-29C39FF61317">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_E53BD2F7-42DA-4FCB-ABBE-1FBEA30E142E">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5C94A5AD-F473-48EF-9883-1D36FFCA0C40">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_90F9420F-170C-4ED0-A55A-555D988410B7">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_71DCACB4-51CD-4145-9157-2F348DA86B45">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5441A8ED-E5A8-4796-A941-1C79E137E37C">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_8FE3C1A1-8A02-46C6-B760-88203E7791A1">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_84F226FE-591F-4D8A-AA2C-292E9A89BADC">
+            <kie:width>790.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F2626835-ADF9-4FD3-B5A5-B279211E1EE9">
+            <kie:width>50.0</kie:width>
+            <kie:width>1075.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0827B4A1-72DA-40C5-95CF-755231A5C5B2">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_C97D9B1C-D293-4F02-81D3-487F8DEBA761">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_69E2FFA8-633E-425B-A5BE-D8940C4D7F9F">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F48B7972-864C-455A-9242-AF3C25AD805A">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CAB6F0D5-A314-4FBC-9E12-D62B48D58473">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_450D5AB8-CB74-424E-8C07-3C860D57D10A">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_455CF35B-CEB7-466C-9DF6-2E79F81D2E94">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_BD98A39C-109D-4772-B3FF-807DCA009655">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_AF8F141B-079F-472D-8603-23F2C21538DB">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_7DB37178-C57D-4558-89AE-1A5CC60C146C">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_AC8F0051-407E-42FE-B850-439FB2973F22">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_846BF2E9-C600-4D50-B3D7-5A7D469F2494">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9C4189EF-5069-45FE-B87B-45E1FC50FECF">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3D4A68BC-779B-4458-B69F-628F05857C8A">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_C26F49FB-881A-457F-851D-F15FE4477005">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_515FBCCF-2298-486D-8859-E0A716C5F878">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2D0309AD-6219-4773-848E-D76291AA375B">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D46D116E-8751-460E-AADA-C583C920FF4E">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_C4E97C96-1E15-46DB-AD6E-BB6BF33CCC57">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FA8017B3-88A4-451D-8C51-1B9374B2D57E">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3AB8FB7C-3B06-4678-87E6-87A5CE2566EF">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2E241072-14F0-4644-A025-3FF5A234F049">
+            <kie:width>988.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CEB31A48-0AEC-44EB-AE61-21A97B27EE11">
+            <kie:width>50.0</kie:width>
+            <kie:width>1158.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_AD333DEF-0471-4FB9-B790-FFD149722C58">
+            <kie:width>50.0</kie:width>
+            <kie:width>242.0</kie:width>
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_67D50CCA-37B2-415B-BF0F-FF4CE5501FCF">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3DADA5A1-A11C-4B5F-AF68-80E36F3FBE54">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FC7FA547-A08F-4E50-88E7-D335C6D859A8">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FD42A20C-26F3-410E-B090-476A8AC3E84D">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_28875321-B5C6-42F6-A487-0422438787D0">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_413EFAF1-D4DA-4764-B8B0-D5332C0DAB6E">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_26FCA49E-3271-4D5A-B3E8-0A76B1E2348A">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2A4555E8-0A69-47A1-9AC9-C5FFD2476FBE">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F0B14BA0-3DF5-4794-A1F7-D2B82A361855">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6233D1D1-FE90-4292-88BB-43DB11E507C7">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_9ACAA398-6948-440E-9F83-63C6CC2872D4">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5C6844A2-2FC8-4144-BF53-73B59537F92E">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_402D32A0-864B-4E60-8F22-367184525A6B">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_DC0C5790-4C17-4126-AA1B-22427996178D">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_3FAD6549-7FE5-4878-9E85-B225B36AD39F">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_81E4FA83-37BA-423A-A846-FE6EB7E17CE4">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_7CDD55B0-FAA5-4A2F-85C5-7FDCC3194D90">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F9E698CD-13D4-4443-AFA5-E0F2C92C812D">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_71E5570F-A921-4D78-875F-DD7E559FE50B">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_90262596-63BC-4496-BA77-9113A58CB3D7">
+            <kie:width>854.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_7A64C79F-FA33-4771-8CA1-46E0FFED8940">
+            <kie:width>50.0</kie:width>
+            <kie:width>1166.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_A3B81783-347D-4FBF-9D94-DDF5CB3D43B1">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>782.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_4E1B2E9C-4B7C-43BA-9815-5526D85CBED7">
+            <kie:width>782.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_4A808A70-5029-489F-8137-AEF37C0BFB87">
+            <kie:width>782.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_14883283-B34C-443F-A5E2-FA9975C8DA5F">
+            <kie:width>782.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_048C693C-A41F-4069-88C0-9E01036E8A21">
+            <kie:width>50.0</kie:width>
+            <kie:width>952.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_78997069-9861-4825-841F-348B28A3780F">
+            <kie:width>50.0</kie:width>
+            <kie:width>100.0</kie:width>
+            <kie:width>802.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_99552680-EEB9-4169-BDF6-6F10864670A4">
+            <kie:width>802.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5A94AD57-CE88-4C00-AB07-96BD3E51FA9C">
+            <kie:width>802.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_8D3FC9DF-8653-49F6-A42E-2D71CB5DF27E">
+            <kie:width>802.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_90506759-3EFC-49A5-AE02-4067BF6FC73B">
+            <kie:width>802.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_BA453C60-C238-49AC-BCC1-E9C28936EBCE">
+            <kie:width>50.0</kie:width>
+            <kie:width>972.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_FA0708CC-E7EB-4A99-A66C-02B5EA5E0BA8">
+            <kie:width>50.0</kie:width>
+            <kie:width>191.0</kie:width>
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_71077120-A2C5-488B-AA4D-CB36244316CB">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F23F5B88-B690-49D2-BE13-DB1689E08CDE">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_5D16B86F-9108-44DF-92B3-0AC7F04C8D87">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F0362F7E-2674-465A-9C44-0B6DBBCB60B9">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_AA8D91E5-DE75-44F3-9BDC-EB433F1971D4">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_EE81C01F-918E-4515-A4A8-3FF27B5EFFD6">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_DFFF24AB-1447-44C7-A32B-3DB0E517FCE7">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_D76ACD56-A918-479A-AC31-62CA4E4787EE">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_F98BEEB9-C6FA-4973-8647-9E4F7100220B">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_02FDDE3A-EE54-4064-8565-2F2C441019D6">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_DF0E398F-B466-4202-82C0-115FE2295A70">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_ED90B9F0-96C1-4A20-BA14-604F11A722E9">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_0C2A9672-D0B0-481F-9555-7D62F4BB3FC7">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6CC5CBEF-EAC2-4C4B-925E-5B5F8BA6BCCC">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_518B950B-D847-491A-B313-6DDAB5D606E1">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_2926C2CD-F081-4BAE-B549-9EC070F21099">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_CF719315-6E69-4471-94CB-308B61C8F872">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_171778C5-DBE6-48A9-83EF-B131522F5602">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_00AE01F9-2284-4866-83F5-C38ED7A8F7CB">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_6763B426-A01B-42C0-803C-484E2E420916">
+            <kie:width>938.0</kie:width>
+          </kie:ComponentWidths>
+          <kie:ComponentWidths dmnElementRef="_17F41561-425B-4C01-A895-BF1BD7D2CA9D">
+            <kie:width>50.0</kie:width>
+            <kie:width>1199.0</kie:width>
+          </kie:ComponentWidths>
+        </kie:ComponentsWidthsExtension>
+      </di:extension>
+      <dmndi:DMNShape id="dmnshape-_35F3B851-9C78-41B3-A194-0A22C0432FE7" dmnElementRef="_35F3B851-9C78-41B3-A194-0A22C0432FE7" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="592" y="175" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_0BA5E824-1411-4760-BE77-D87878E7DAD0" dmnElementRef="_0BA5E824-1411-4760-BE77-D87878E7DAD0" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="555" y="57" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_65AF18B4-69FD-4E84-B5F4-802A61BC419D" dmnElementRef="_65AF18B4-69FD-4E84-B5F4-802A61BC419D" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="488" y="276" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_A43B88AF-4CE5-4F75-B031-C22D99FA1A61" dmnElementRef="_A43B88AF-4CE5-4F75-B031-C22D99FA1A61" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="256" y="116.34210526315789" width="115" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_58A4E44A-D08F-4204-B6AE-1B410B4BF430" dmnElementRef="_58A4E44A-D08F-4204-B6AE-1B410B4BF430" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="404" y="72.68421052631578" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_87D210F5-4FF1-4F6F-B750-568DD8763D72" dmnElementRef="_87D210F5-4FF1-4F6F-B750-568DD8763D72" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="358" y="329" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_B0E9A975-8571-4B03-AB5A-8775F4192BFC" dmnElementRef="_B0E9A975-8571-4B03-AB5A-8775F4192BFC" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="679.2990654205607" y="266" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_6AF4F97B-03BB-4E0E-83EC-74016009CDE7" dmnElementRef="_6AF4F97B-03BB-4E0E-83EC-74016009CDE7" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="227.59813084112147" y="329" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="dmnshape-_E8AE541B-2674-4984-A8CE-8CF6C19500AF" dmnElementRef="_E8AE541B-2674-4984-A8CE-8CF6C19500AF" isCollapsed="false">
+        <dmndi:DMNStyle>
+          <dmndi:FillColor red="255" green="255" blue="255"/>
+          <dmndi:StrokeColor red="0" green="0" blue="0"/>
+          <dmndi:FontColor red="0" green="0" blue="0"/>
+        </dmndi:DMNStyle>
+        <dc:Bounds x="171" y="187" width="100" height="50"/>
+        <dmndi:DMNLabel/>
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="dmnedge-_0FB2B7DF-FA05-41CB-B852-189040966784" dmnElementRef="_0FB2B7DF-FA05-41CB-B852-189040966784">
+        <di:waypoint x="538" y="301"/>
+        <di:waypoint x="642" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_2C00E116-1582-40BB-AC89-F5D3B8F14E1D" dmnElementRef="_2C00E116-1582-40BB-AC89-F5D3B8F14E1D">
+        <di:waypoint x="729.2990654205607" y="291"/>
+        <di:waypoint x="642" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_94004433-7367-46EE-BEF8-134F57207744" dmnElementRef="_94004433-7367-46EE-BEF8-134F57207744">
+        <di:waypoint x="221" y="212"/>
+        <di:waypoint x="642" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_8713FEB4-7BF0-4A28-8DD6-7AD9192BAEB9" dmnElementRef="_8713FEB4-7BF0-4A28-8DD6-7AD9192BAEB9">
+        <di:waypoint x="605" y="82"/>
+        <di:waypoint x="642" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_E7E45B10-BD80-4D66-8D77-301D3595BCEE" dmnElementRef="_E7E45B10-BD80-4D66-8D77-301D3595BCEE">
+        <di:waypoint x="454" y="97.68421052631578"/>
+        <di:waypoint x="642" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_00B4EB20-0266-4AA8-AE83-5C1792556D48" dmnElementRef="_00B4EB20-0266-4AA8-AE83-5C1792556D48">
+        <di:waypoint x="313.5" y="141.3421052631579"/>
+        <di:waypoint x="642" y="200"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_19933A93-454E-4E81-9087-4BB02A2CEC8E" dmnElementRef="_19933A93-454E-4E81-9087-4BB02A2CEC8E">
+        <di:waypoint x="277.5981308411215" y="354"/>
+        <di:waypoint x="221" y="212"/>
+      </dmndi:DMNEdge>
+      <dmndi:DMNEdge id="dmnedge-_DBF70682-65F2-4D6A-8C3E-34EFEB995A3C" dmnElementRef="_DBF70682-65F2-4D6A-8C3E-34EFEB995A3C">
+        <di:waypoint x="408" y="354"/>
+        <di:waypoint x="221" y="212"/>
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</dmn:definitions>

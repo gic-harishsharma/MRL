@@ -1,0 +1,845 @@
+{
+  "model-name": "MRL",
+  "model-namespace": "https://kiegroup.org/dmn/_238781D9-880C-4F32-8581-EA6A75538AC9",
+  "dmn-context": {
+    "Rule Parameter List": [
+      {
+        "RuleNo": "EMP-MRL-R3",
+        "RuleParam": [
+          {
+            "Any Field List": [
+              
+            ],
+            "All Field List": [
+              "Employee ID_",
+              "Client Name disclosure"
+            ],
+            "All Document List": [
+              
+            ],
+            "Any Document List": [
+              
+            ]
+          }
+        ],
+        "SpecialParameterInfo": [
+          
+        ]
+      },
+      {
+        "RuleNo": "EMP-MRL-R1",
+        "RuleParam": [
+          {
+            "Any Field List": [
+              
+            ],
+            "All Field List": [
+              "Employee ID",
+              "Client Name disclosure"
+            ],
+            "All Document List": [
+              "Employment - Relieving Letter (As per Document)_","io_"
+            ],
+            "Any Document List": [
+              "od","ios"
+            ]
+          }
+        ],
+        "SpecialParameterInfo": [
+          
+        ]
+      },
+      {
+        "RuleNo": "EMP-MRL-R2",
+        "RuleParam": [
+          {
+            "Any Field List": [
+              
+            ],
+            "All Field List": [
+              "Employee ID",
+              "Candidate Name",
+              "DOB",
+              "LOA Signature"
+            ],
+            "All Document List": [
+              "Letter of Authorization (As per BVF)"
+            ],
+            "Any Document List": [
+              
+            ]
+          }
+        ],
+        "SpecialParameterInfo": [
+          {
+            "Field": "EqualTo",
+            "Value": [
+              {
+                "Field": "LOA Signature",
+                "Value": [
+                  "Manual",
+                  "manual"
+                ]
+              },
+              {
+                "Field": "LOA Signature",
+                "Value": [
+                  "30 Days"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Records Data": [
+      [
+        {
+          "Field": "RecordNbr",
+          "Value": 0
+        },
+        {
+          "Field": "packageName",
+          "Value": "New Package 22-Apr-16 SRT CDE"
+        },
+        {
+          "Field": "addOnPackage",
+          "Value": false
+        },
+        {
+          "Field": "addOnPackages",
+          "Value": [
+            
+          ]
+        },
+        {
+          "Field": "sequence",
+          "Value": -1
+        },
+        {
+          "Field": "Component name",
+          "Value": "Education"
+        },
+        {
+          "Field": "componentName",
+          "Value": "Education"
+        },
+        {
+          "Field": "PRODUCT",
+          "Value": "Education (Highest Qualification)"
+        },
+        {
+          "Field": "dbComponent",
+          "Value": false
+        },
+        {
+          "Field": "ComponentProvenance",
+          "Value": null
+        },
+        {
+          "Field": "Aka Name",
+          "Value": "Osmania University Hyderabad"
+        },
+        {
+          "Field": "Completed/Pursuing",
+          "Value": "Completed"
+        },
+        {
+          "Field": "University Location (State)",
+          "Value": "Telangana"
+        },
+        {
+          "Field": "Period of Study (To)",
+          "Value": ""
+        },
+        {
+          "Field": "Employee ID",
+          "Value": "Hyderabad"
+        },
+        {
+          "Field": "University(Country)",
+          "Value": "India"
+        },
+        {
+          "Field": "College Name",
+          "Value": "Bhavans Vivekananda College"
+        },
+        {
+          "Field": "Part time or full time - Portal",
+          "Value": ""
+        },
+        {
+          "Field": "Unique Number",
+          "Value": "17529"
+        },
+        {
+          "Field": "Result",
+          "Value": "Pass"
+        },
+        {
+          "Field": "Year of Passing",
+          "Value": "2018"
+        },
+        {
+          "Field": "BNPGradTestfield",
+          "Value": ""
+        },
+        {
+          "Field": "Specialization",
+          "Value": ""
+        },
+        {
+          "Field": "Qualification/course name - Portal",
+          "Value": ""
+        },
+        {
+          "Field": "requestId",
+          "Value": "240314-3714cf-821608"
+        },
+        {
+          "Field": "Is the document clear?",
+          "Value": "Good"
+        },
+        {
+          "Field": "Regular or Correspondence",
+          "Value": "Regular"
+        },
+        {
+          "Field": "University Name",
+          "Value": "Osmania University - Hyderabad"
+        },
+        {
+          "Field": "College/Centre Name Aka Name",
+          "Value": "Bhavan's Vivekananda College Hyderabad"
+        },
+        {
+          "Field": "MI",
+          "Value": "Yes"
+        },
+        {
+          "Field": "Part time or full time",
+          "Value": "Full time"
+        },
+        {
+          "Field": "College(Country)",
+          "Value": "India"
+        },
+        {
+          "Field": "Grand Total",
+          "Value": ""
+        },
+        {
+          "Field": "College City",
+          "Value": "Hyderabad"
+        },
+        {
+          "Field": "Qualification/course name",
+          "Value": "Bachelor of Commerce"
+        },
+        {
+          "Field": "Period of Study (From)",
+          "Value": ""
+        },
+        {
+          "Field": "Qualification level",
+          "Value": "Bachelors"
+        },
+        {
+          "Field": "Access code",
+          "Value": ""
+        },
+        {
+          "Field": "Portal ID",
+          "Value": ""
+        },
+        {
+          "Field": "Is the institute part of Wipro DNH List",
+          "Value": ""
+        },
+        {
+          "Field": "documentSource",
+          "Value": [
+            {
+              "txProvenance": "DocMergeEngine",
+              "associated": true,
+              "action": "Self",
+              "section": "Education Detail (As per BVF)",
+              "type": "bvf"
+            }
+          ]
+        },
+        {
+          "Field": "CANDIDATE_DE_COMPLETED_DT",
+          "Value": "2021-05-24"
+        },
+        {
+          "Field": "Grade/Class",
+          "Value": ""
+        },
+        {
+          "Field": "miRemarks",
+          "Value": "Copy of consolidated Mark Sheet or Degree Certificate or Provisional Certificate with  [Roll No / Enrollment No / Seat No/ Convocation No / Registration No as applicable] would be required."
+        },
+        {
+          "Field": "University Aka Name",
+          "Value": "Osmania University Hyderabad"
+        },
+        {
+          "Field": "Document issued Date",
+          "Value": ""
+        },
+        {
+          "Field": "Is this Professional Education",
+          "Value": ""
+        },
+        {
+          "Field": "University Name - Portal",
+          "Value": ""
+        },
+        {
+          "Field": "College Location (State)",
+          "Value": "Telangana"
+        },
+        {
+          "Field": "INSTRUCTION_CHECK_ID",
+          "Value": 1
+        },
+        {
+          "Field": "ruleResult",
+          "Value": {
+            "result": [
+              "Include"
+            ],
+            "success": true,
+            "message": "SUCCEEDED",
+            "status": 200
+          }
+        },
+        {
+          "Field": "Month of Passing",
+          "Value": ""
+        },
+        {
+          "Field": "College Name - Portal",
+          "Value": ""
+        },
+        {
+          "Field": "Unique Number Type",
+          "Value": "Seat Number"
+        },
+        {
+          "Field": "checkBoxSelectClass",
+          "Value": "checkbox default"
+        },
+        {
+          "Field": "LookupData",
+          "Value": [
+            {
+              "componentName": "Education",
+              "productName": "Education (Highest Qualification)",
+              "country name": "India",
+              "contactCardName": "Osmania University Hyderabad",
+              "contactCardId": "120f97cc-0951-4ca3-b710-0651fe201eed",
+              "ruleId": "EMP-MRL-R3"
+            }
+          ]
+        },
+        {
+          "Field": "Client Name disclosure",
+          "Value": [
+            
+          ]
+        },
+        {
+          "Field": "DocValidationResult",
+          "Value": [
+            {
+              "isvalid": "false",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Invalid",
+                  {
+                    "Field": "Is the document clear?",
+                    "Value": "Incomplete",
+                    "ExpectedValue": [
+                      "Good"
+                    ]
+                  }
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "is the document clear?",
+                "gender",
+                "nationality",
+                "surname as per passport",
+                "dob",
+                "document name",
+                "given name as per passport",
+                "doc identification no",
+                "candidate name",
+                "date of expiry",
+                "date of issue"
+              ],
+              "Document name": "Passport (As per Document)",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "Candidate name": "Diwa MRL test case3",
+                  "Date of Expiry": "2022-06-30",
+                  "Document Name": "Passport",
+                  "Machine readable zone line - 3": "",
+                  "Gender": "Male",
+                  "Machine readable zone line - 2": "",
+                  "Doc Identification No": "MNA14562",
+                  "Nationality": "India",
+                  "Machine readable zone line - 1": "",
+                  "Surname as per passport": "MRL test case3",
+                  "DOB": "1977-07-11",
+                  "Is the document clear?": "Incomplete",
+                  "Place of Issue - New": "",
+                  "Country": "",
+                  "Given name as per passport": "Diwa",
+                  "Date of Issue": "2007-07-01"
+                }
+              ]
+            },
+            {
+              "isvalid": "false",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Invalid",
+                  {
+                    "Field": "Is the document clear?",
+                    "Value": "Incomplete",
+                    "ExpectedValue": [
+                      "Good"
+                    ]
+                  }
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "country",
+                "is this previous employment linked to current employment",
+                "city",
+                "date of joining",
+                "company name",
+                "functional entity name",
+                "is the document clear?",
+                "employee id",
+                "company aka name",
+                "designation",
+                "state",
+                "service type",
+                "aka name"
+              ],
+              "Document name": "Employment - Pay Slip (As per Document)",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "Aka Name": "Buzzworks Business Services Private Limited Chennai Balfour Road",
+                  "Supervisor name & contact Details": "",
+                  "Company Aka Name": "Buzzworks Business Services Private Limited Chennai Balfour Road",
+                  "Employee ID": "M104115",
+                  "Third Party or Agency Name and Address": "",
+                  "Department": "",
+                  "Third party Company(city)": "",
+                  "Third Party Company": "",
+                  "Functional Entity Name": "BUZZWORKS BUSINESS SERVICES PRIVATE LIMITED ",
+                  "DOB": "",
+                  "Is the document clear?": "Incomplete",
+                  "Date of joining": "2017-04-01",
+                  "Company Contact No": "",
+                  "Designation": "Manager",
+                  "Is this Previous Employment linked to Current Employment": "No",
+                  "City": "Chennai",
+                  "Agency Company AKA Name": "",
+                  "Remuneration": "",
+                  "Is this your Current Employment (CE)": "",
+                  "Third party Company(Country)": "",
+                  "Company Name": "BUZZWORKS BUSINESS SERVICES PRIVATE LIMITED",
+                  "City posted organization": "",
+                  "State": "Tamil Nadu",
+                  "Country": "India",
+                  "Complete Company Address with Landmark": "",
+                  "Third party Company(state)": "",
+                  "Father's Name": "",
+                  "Service Type": "Employment",
+                  "Agency name branch Address & Contact details": ""
+                }
+              ]
+            },
+            {
+              "isvalid": "false",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Invalid",
+                  {
+                    "Field": "Is the document dlear?",
+                    "Value": "Illegible",
+                    "ExpectedValue": [
+                      "Good"
+                    ]
+                  }
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "university name",
+                "is this professional education",
+                "university city",
+                "period of study (to)",
+                "university(country)",
+                "qualification/course name",
+                "completed/pursuing",
+                "qualification level",
+                "year of passing",
+                "is the document clear?",
+                "unique number",
+                "period of study (from)",
+                "university aka name",
+                "name of the candidate while attending the below qualification",
+                "university location (state)",
+                "specialization",
+                "unique number type",
+                "aka name"
+              ],
+              "Document name": "Degree Certificate",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "University Location (State)": "Telangana",
+                  "Completed/Pursuing": "Completed",
+                  "Aka Name": "Osmania University Hyderabad",
+                  "Period of Study (To)": "2017-05-31",
+                  "University City": "Hyderabad",
+                  "University(Country)": "India",
+                  "QR Code": "",
+                  "College Name": "",
+                  "Unique Number": "123456",
+                  "Year of Passing": "2017",
+                  "Specialization": "Economics",
+                  "School/College/Institution Address": "",
+                  "Regular or Correspondence": "",
+                  "Is the document clear?": "Incomplete",
+                  "University Name": "Osmania University - Hyderabad",
+                  "College/Centre Name Aka Name": "",
+                  "Part time or full time": "",
+                  "College(Country)": "",
+                  "Name of the candidate while attending the below qualification": "Diwakar",
+                  "College City": "",
+                  "Qualification/course name": "Bachelor of Arts",
+                  "Qualification level": "Bachelors",
+                  "Period of Study (From)": "2014-04-01",
+                  "Grade/Class": "",
+                  "University Aka Name": "Osmania University Hyderabad",
+                  "Document issued Date": "",
+                  "Is this Professional Education": "No",
+                  "College Location (State)": "",
+                  "Month of Passing": "",
+                  "Unique Number Type": "Registration Number"
+                }
+              ]
+            },
+            {
+              "isvalid": "true",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Valid Document"
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "additional comments",
+                "gender",
+                "identification submitted",
+                "has the candidate declared any admitted hits/criminal charges",
+                "doc identification no",
+                "name of the candidate",
+                "candidate name",
+                "father’s name",
+                "is the document clear?",
+                "last name",
+                "first name",
+                "nationality",
+                "dob",
+                "marital status"
+              ],
+              "Document name": "Personal Details (As per BVF)",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "Address": "",
+                  "Identification Submitted": "PAN Card",
+                  "Personal Mobile No": "",
+                  "First Name": "Diwa",
+                  "Full Address": "",
+                  "Middle Name": "",
+                  "Gender": "Male",
+                  "Doc Identification No": "ANRPD1785F",
+                  "Marital Status": "Married",
+                  "Nationality": "India",
+                  "SSN": "",
+                  "Home phone": "",
+                  "Additional comments": "NA",
+                  "Candidate Name": "Diwa  MRL Test Case3",
+                  "DOB": "1977-07-11",
+                  "Maiden name": "",
+                  "Professional Email ID": "",
+                  "Is the document clear?": "Good",
+                  "Personal Email ID": "",
+                  "Last Name": "MRL Test Case3",
+                  "Has the candidate declared any admitted hits/criminal charges": "No",
+                  "Father’s Name": "Narahari N",
+                  "Name of the Candidate": "Diwa MRL Test Case3"
+                }
+              ]
+            },
+            {
+              "isvalid": "true",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Rule configuration not found"
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "university name",
+                "is this professional education",
+                "university city",
+                "period of study (to)",
+                "university(country)",
+                "qualification/course name",
+                "completed/pursuing",
+                "qualification level",
+                "year of passing",
+                "unique number",
+                "period of study (from)",
+                "university aka name",
+                "part time or full time",
+                "name of the candidate while attending the below qualification",
+                "university location (state)",
+                "specialization",
+                "unique number type",
+                "aka name"
+              ],
+              "Document name": "Education Detail (As per BVF)",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "University Location (State)": "Telangana",
+                  "Completed/Pursuing": "Completed",
+                  "Aka Name": "Osmania University Hyderabad",
+                  "Period of Study (To)": "2017-05-31",
+                  "University City": "Hyderabad",
+                  "University(Country)": "India",
+                  "College Name": "",
+                  "Unique Number": "123456",
+                  "Result": "",
+                  "Year of Passing": "2017",
+                  "Specialization": "Economics",
+                  "Regular or Correspondence": "",
+                  "Is the document clear?": "",
+                  "University Name": "Osmania University - Hyderabad",
+                  "Graduated": "",
+                  "College/Centre Name Aka Name": "",
+                  "MI": "",
+                  "Part time or full time": "Full time",
+                  "College(Country)": "",
+                  "Class Obtained as per document:": "",
+                  "Grand Total": "",
+                  "Graduated date": "",
+                  "Identification Type (E.g. SSN, HKID, Passport#, NRIC # etc):": "",
+                  "Name of the candidate while attending the below qualification": "Diwakar",
+                  "College City": "",
+                  "Qualification/course name": "Bachelor of Arts",
+                  "Qualification level": "Bachelors",
+                  "Period of Study (From)": "2014-04-01",
+                  "Access code": "",
+                  "Portal ID": "",
+                  "Is the institute part of Wipro DNH List": "",
+                  "Grade/Class": "",
+                  "miRemarks": "",
+                  "University Aka Name": "Osmania University Hyderabad",
+                  "Is this Professional Education": "No",
+                  "College Location (State)": "",
+                  "Month of Passing": "",
+                  "Unique Number Type": "Registration Number"
+                }
+              ]
+            },
+            {
+              "isvalid": "true",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Rule configuration not found"
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "country",
+                "is this previous employment linked to current employment",
+                "city",
+                "supervisor name & contact details",
+                "date of joining",
+                "company address and contact details",
+                "hr contact details",
+                "employee id or entity specific id",
+                "company name",
+                "functional entity name",
+                "is ce pending?",
+                "agency name branch address & contact details",
+                "nature of employment",
+                "employee id",
+                "company aka name",
+                "date of exit",
+                "reason for leaving",
+                "state",
+                "service type",
+                "designation",
+                "supervisor name & designation",
+                "aka name"
+              ],
+              "Document name": "Employment Details (As per BVF)",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "Aka Name": "Buzzworks Business Services Private Limited Chennai Balfour Road",
+                  "Entity Specific Type": "",
+                  "Supervisor's Email ID": "",
+                  "Client Location where the Candidate is Joining": "",
+                  "Supervisor name & contact Details": "  ",
+                  "Company Aka Name": "Buzzworks Business Services Private Limited Chennai Balfour Road",
+                  "Department": "",
+                  "Third party Company(city)": "",
+                  "Date to be contacted": "",
+                  "Third Party Company": "",
+                  "HR Name": "",
+                  "Employment Type": "",
+                  "DOB": "",
+                  "Company Address Pincode": "",
+                  "Date Of Exit (Till Date)": "",
+                  "Date of joining": "2017-05-01",
+                  "Reason for Leaving": "Better Prospect",
+                  "Date of joining As per document": "",
+                  "MI": "",
+                  "Date of Exit": "2020-05-31",
+                  "Supervisor name & designation": " ",
+                  "HR contact details": " ",
+                  "Is the company part of Wipro DNH List": "",
+                  "Designation offered at Client place": "",
+                  "Can CE be contacted": "",
+                  "Salary offered to Candidate by the Client ": "",
+                  "HR Contact No": "",
+                  "Is this Previous Employment linked to Current Employment": "No",
+                  "City": "Chennai",
+                  "Remuneration": "",
+                  "Date of LOA": "",
+                  "Is this your Current Employment (CE)": "",
+                  "Email ID of the Division HR official": "",
+                  "Currency Code": "",
+                  "State": "Tamil Nadu",
+                  "HR email ID": "",
+                  "Country": "India",
+                  "Third party Company(state)": "",
+                  "Father's Name": "",
+                  "Nature of Employment": "Permanent",
+                  "Service Type": "Employment",
+                  "Agency name branch Address & Contact details": "   ",
+                  "Employee ID": "M104115",
+                  "Domain offered to Candidate at Client Location": "",
+                  "Designation & Role/Technology": "",
+                  "Candidate date of joining in the Client Place": "",
+                  "Is CE Pending?": "No",
+                  "Third Party or Agency Name and Address": "",
+                  "Employee ID or Entity specific ID": "M104115 ",
+                  "Functional Entity Name": "BUZZWORKS BUSINESS SERVICES PRIVATE LIMITED ",
+                  "Entity Specific ID": "",
+                  "Supervisor Name": "",
+                  "Supervisor's Contact No": "",
+                  "Company Contact No": "",
+                  "Supervisor Designation": "",
+                  "Self employment/Family business": "",
+                  "Company Address Line 1": "",
+                  "Designation": "Manager",
+                  "Company Address Line 2": "",
+                  "Reason For Gap": "",
+                  "Type of verification": "",
+                  "Client Address & Contact Details": "",
+                  "Position Candidate has applied in Client Place": "",
+                  "Agency Company AKA Name": "",
+                  "Location Where the Candidate was deployed/Location Where the Candidate Worked": "",
+                  "Third party Company(Country)": "",
+                  "Company Name": "BUZZWORKS BUSINESS SERVICES PRIVATE LIMITED",
+                  "LOA Signature": "",
+                  "Date of Exit As per document": "",
+                  "miRemarks": "",
+                  "Company Address and Contact Details": " ",
+                  "Complete Company Address with Landmark": ""
+                }
+              ]
+            },
+            {
+              "isvalid": "true",
+              "ruleResult": {
+                "status": 200,
+                "success": true,
+                "reason": [
+                  "Valid Document"
+                ]
+              },
+              "carryForward": null,
+              "documentFieldNamesWithValue": [
+                "is manually signed",
+                "is the document clear?",
+                "loa signature",
+                "date of loa",
+                "i certify",
+                "is the candidate name in loa matching as per any govt. identity proof?",
+                "advanced letter of authorization form (signed within 3 months)",
+                "candidate name",
+                "is loa completely filled"
+              ],
+              "Document name": "Letter of Authorization (As per BVF)",
+              "Component Name": null,
+              "Product Name": null,
+              "Records": [
+                {
+                  "LOA Signature": "Manual",
+                  "Advanced Letter of Authorization form (Signed within 3 months)": "Manual",
+                  "Candidate Name": "Virat",
+                  "Is manually signed": "Yes",
+                  "Is LOA completely filled": "Yes",
+                  "Is the document clear?": "Good",
+                  "I certify": "Yes",
+                  "Is the Candidate Name in LOA matching as per any Govt. Identity Proof?": "Yes",
+                  "Date of LOA": "2021-06-24",
+                  "Number of Pages": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    ]
+  }
+}

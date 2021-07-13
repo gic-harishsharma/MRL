@@ -1,0 +1,345 @@
+{
+  "model-name": "NON_Entity_MRL",
+  "model-namespace": "https://kiegroup.org/dmn/_822A6166-03C3-4ABD-A5FA-EA571816F793",
+  "dmn-context": {
+    "Rule Parameter List": [
+      {
+        "RuleNo": "SMS-MRL-R1",
+        "RuleParam": [
+          {
+            "Any Field List": [
+            
+            ],
+            "All Field List": [
+                "Is Proof of Current / Current and Permanent Address provided"
+            ],
+            "All Document List": [
+              "Letter of Authorization (As per BVF)"
+            ],
+            "Any Document List": [
+              
+            ]
+          }
+        ],
+        "SpecialParameterInfo": [
+          {
+            "Field": "EqualTo",
+            "Value": [
+              {
+                "Field": "Is Proof of Current / Current and Permanent Address provided",
+                "Value": [
+                  "Yes"
+                ]
+              }
+            ]
+          }
+        ],
+        "SpecificParameter": [
+          {
+            "Field": "EqualTo",
+            "Value": [
+              {
+                "Field": "Nationality",
+                "Value": [
+                  "United States of America"
+                ],
+                "AnyAvailable_Field": [
+                  "SSN Number",
+                  "SSN"
+                ],
+                "AllAvailable_Field": [
+                  
+                ],
+                "AnyAvailable_Doc": [
+                  
+                ],
+                "AllAvailable_Doc": [
+                 
+                ]
+              }
+            ]
+          },
+          {
+            "Field": "StartsWith",
+            "Value": [
+              {
+                "Field": "Employee Code",
+                "Value": [
+                  
+                ],
+                "AnyAvailable_Field": [
+                  
+                ],
+                "AllAvailable_Field": [
+                 
+                ],
+                "AnyAvailable_Doc": [
+                 
+                ],
+                "AllAvailable_Doc": [
+                 
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "LookupData": [
+      {
+        "componentName": "Social Media Screening",
+        "productName": "FAMA social media",
+        "ruleId": "SMS-MRL-R1"
+      }
+    ],
+    "Records Data": [
+      [
+        {
+          "Field": "RecordNbr",
+          "Value": 0
+        },
+        {
+          "Field": "SSN",
+          "Value": "sh"
+        },
+        {
+          "Field": "Date of Exit",
+          "Value": "2020-09-06"
+        },
+        {
+          "Field": "Date of joining",
+          "Value": "2017-01-01"
+        },
+        {
+          "Field": "Employee Code",
+          "Value": "T94"
+        },
+        {
+          "Field": "addOnPackages",
+          "Value": [
+            
+          ]
+        },
+        {
+          "Field": "sequence",
+          "Value": 7
+        },
+        {
+          "Field": "addOnPackage",
+          "Value": false
+        },
+        {
+          "Field": "PRODUCT",
+          "Value": "FAMA social media"
+        },
+        {
+          "Field": "ComponentProvenance",
+          "Value": null
+        },
+        {
+          "Field": "Component name",
+          "Value": "Social Media Screening"
+        },
+        {
+          "Field": "packageName",
+          "Value": "Package 2 - Lateral 13-Aug-20 SRT CDE"
+        },
+        {
+          "Field": "componentName",
+          "Value": "Social Media Screening"
+        },
+        {
+          "Field": "dbComponent",
+          "Value": false
+        },
+        {
+          "Field": "Area or Locality or Sector",
+          "Value": "Chikkabidrakallu"
+        },
+        {
+          "Field": "Is Current permanent both are same",
+          "Value": "No"
+        },
+        {
+          "Field": "Period of Stay - From",
+          "Value": "1988-01-28"
+        },
+        {
+          "Field": "Full Address",
+          "Value": "No.46 Sri Krishna Nilaya Revanna Layout Chikkabidrakallu Near Old Water Tank Bengaluru Bangalore Rural 560073 Karnataka India"
+        },
+        {
+          "Field": "City/Pincode/State/Country",
+          "Value": "Bengaluru 560073 Karnataka India"
+        },
+        {
+          "Field": "Period of Stay - To",
+          "Value": ""
+        },
+        {
+          "Field": "Is Permanent previous both are same",
+          "Value": "No"
+        },
+        {
+          "Field": "Mobile Number",
+          "Value": "7349098942"
+        },
+        {
+          "Field": "Postal Zip Code Pin Code",
+          "Value": "560073"
+        },
+        {
+          "Field": "Building Number & Name",
+          "Value": "Sri Krishna Nilaya"
+        },
+        {
+          "Field": "Candidate Name",
+          "Value": "Deepak  Add Test Case"
+        },
+        {
+          "Field": "HouseType",
+          "Value": "Own House"
+        },
+        {
+          "Field": "DOB",
+          "Value": "1988-01-28"
+        },
+        {
+          "Field": "requestId",
+          "Value": "23f680-54542e-7d5701"
+        },
+        {
+          "Field": "Date Of Exit (Till Date)",
+          "Value": "Yes"
+        },
+        {
+          "Field": "MI",
+          "Value": ""
+        },
+        {
+          "Field": "House / Flat Number",
+          "Value": "No.46"
+        },
+        {
+          "Field": "Address Type",
+          "Value": "Permanent address"
+        },
+        {
+          "Field": " Can we contact Candidate for directions?",
+          "Value": "Yes"
+        },
+        {
+          "Field": "Is Proof of Current / Current and Permanent Address provided",
+          "Value": "Yes"
+        },
+        {
+          "Field": "Pincode/State/Country",
+          "Value": "560073 Karnataka India"
+        },
+        {
+          "Field": "Landmark",
+          "Value": "Near Old Water Tank"
+        },
+        {
+          "Field": "City",
+          "Value": "Bengaluru"
+        },
+        {
+          "Field": "Street Name / Lane Name",
+          "Value": "Revanna Layout"
+        },
+        {
+          "Field": "documentSource",
+          "Value": [
+            {
+              "txProvenance": "Big Bang",
+              "associated": true,
+              "action": "Self",
+              "section": "Address Details - Permanent (As per BVF)",
+              "type": "bvf"
+            },
+            {
+              "txProvenance": "Big Bang",
+              "associated": true,
+              "action": "Self",
+              "section": "Service Certificate",
+              "type": "bvf"
+            }
+          ]
+        },
+        
+        {
+          "Field": "Entire Address for Wipro",
+          "Value": "No.46 Sri Krishna Nilaya Revanna Layout Near Old Water Tank Chikkabidrakallu Bengaluru Bangalore Rural 560073 Karnataka India"
+        },
+        {
+          "Field": "CANDIDATE_DE_COMPLETED_DT",
+          "Value": "2021-04-28"
+        },
+        {
+          "Field": "Is address proof available? ",
+          "Value": "No"
+        },
+        {
+          "Field": "miRemarks",
+          "Value": ""
+        },
+        {
+          "Field": "State",
+          "Value": "Karnataka"
+        },
+        {
+          "Field": "Complete Address",
+          "Value": "No.46 Sri Krishna Nilaya Revanna Layout Chikkabidrakallu Near Old Water Tank"
+        },
+        {
+          "Field": "Nationality",
+          "Value": "United States of America"
+        },
+        {
+          "Field": "Landlord contact No",
+          "Value": ""
+        },
+        {
+          "Field": "checkBoxSelectClass",
+          "Value": "checkbox default"
+        },
+        {
+          "Field": "INSTRUCTION_CHECK_ID",
+          "Value": 2
+        },
+        {
+          "Field": "ruleResult",
+          "Value": {
+            "result": [
+              "Include"
+            ],
+            "success": true,
+            "message": "SUCCEEDED",
+            "status": 200
+          }
+        },
+        {
+          "Field": "Fatherâ€™s Name",
+          "Value": ""
+        },
+        {
+          "Field": "District",
+          "Value": "Bangalore Rural"
+        },
+        {
+          "Field": "LookupData",
+          "Value": [
+            
+          ]
+        },
+        {
+          "Field": "Client Name disclosure",
+          "Value": [
+            
+          ]
+        }
+      ]
+    ]
+  }
+}
